@@ -1,0 +1,3 @@
+theme = GruvboxDarkHard
+font-size = 15
+scrollback-limit = 100000000

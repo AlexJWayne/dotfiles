@@ -4,8 +4,8 @@
 # You can use it to add commands that run after AeroSpace startup.
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
-  'exec-and-forget borders active_color=0xff669cff inactive_color=0xff494d64 width=5.0',
-  'exec-and-forget sketchybar',
+  'exec-and-forget /opt/homebrew/bin/borders active_color=0xff669cff inactive_color=0xff494d64 width=5.0',
+  'exec-and-forget /opt/homebrew/bin/sketchybar',
 ]
 
 # Notify Sketchybar about workspace change
@@ -105,6 +105,10 @@ automatically-unhide-macos-hidden-apps = false
     ctrl-alt-cmd-shift-w = 'exec-and-forget open /Applications/Arc.app'
     ctrl-alt-cmd-shift-c = 'exec-and-forget open /Applications/Zed.app'
     ctrl-alt-cmd-shift-s = 'exec-and-forget open /Applications/Slack.app'
+    ctrl-alt-cmd-shift-f = 'exec-and-forget open /System/Library/CoreServices/Finder.app'
+    ctrl-alt-cmd-shift-m = 'exec-and-forget open /Applications/Microsoft\ Teams.app'
+    ctrl-alt-cmd-shift-o = 'exec-and-forget open /Applications/Microsoft\ Outlook.app'
+
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#layout
     alt-comma = 'layout accordion horizontal vertical'
@@ -112,12 +116,15 @@ automatically-unhide-macos-hidden-apps = false
     alt-slash = 'layout floating tiling'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#focus
+    # Left Finger cluster
     alt-t = 'focus left'
     alt-d = 'focus down'
     alt-p = 'focus up'
     alt-g = 'focus right'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move
+    # Left Finger cluster
+    alt-t = 'focus left'
     alt-shift-t = 'move left'
     alt-shift-d = 'move down'
     alt-shift-p = 'move up'

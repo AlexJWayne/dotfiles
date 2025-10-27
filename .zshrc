@@ -51,3 +51,17 @@ eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/my-gruv.json)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+
+# Update terminal/tab title to the running command
+# Prune some noise out of commonly run NX commands for work
+preexec() {
+    local cmd="$1"
+    cmd=${cmd/#nx run /}
+    cmd="${cmd%% --host 0.0.0.0}"
+    print -Pn "\e]2;${cmd}\a"
+}
+precmd() {
+    print -Pn "\e]2;%~\a"
+}

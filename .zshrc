@@ -4,6 +4,7 @@
 eval "$(fnm env --use-on-cd)"
 
 alias g="git"
+alias sso="aws sso login --profile DEV && aws sso login --profile PROD"
 
 export AWS_PROFILE=DEV
 
@@ -46,3 +47,7 @@ eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/my-gruv.json)"
 
 # NX Autocomplete
 # source ~/.nx-completion/nx-completion.plugin.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

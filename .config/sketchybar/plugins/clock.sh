@@ -4,4 +4,5 @@
 # the item invoking this script:
 # https://felixkratz.github.io/SketchyBar/config/events#events-and-scripting
 
-sketchybar --set "$NAME" label="$(date '+%a %b %e %I:%M')"
+time=$(date '+%a %b %e  %l:%M %p' | sed 's/PM/pm/g' | sed 's/AM/am/g')
+sketchybar --set "$NAME" label="$time"

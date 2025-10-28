@@ -28,7 +28,7 @@ export PATH="$PATH:/Users/alex/.local/bin"
 # export PATH="$PATH:$HOME/.zvm/self"
 export PATH="$PATH:$HOME/zig"
 
-# # https://github.com/zsh-users/zsh-autosuggestion
+# https://github.com/zsh-users/zsh-autosuggestion
 source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Up arrow searches history with a prefix of what you typed so far

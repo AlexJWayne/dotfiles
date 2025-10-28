@@ -12,10 +12,15 @@ config.hide_tab_bar_if_only_one_tab = true
 config.font_size = 15
 config.tab_max_width = 24
 
-config.colors = {
-    background = "#222222"
-}
+config.color_scheme = 'Gruvbox dark, hard (base16)'
 
+config.keys = {
+    {
+        key = 'k',
+        mods = 'CMD',
+        action = wezterm.action.ClearScrollback 'ScrollbackAndViewport',
+    }
+}
 
 wezterm.on(
     'format-tab-title',

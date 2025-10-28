@@ -4,7 +4,7 @@
 # You can use it to add commands that run after AeroSpace startup.
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
-  'exec-and-forget /opt/homebrew/bin/borders active_color=0xff669cff inactive_color=0xff494d64 width=5.0',
+  'exec-and-forget /opt/homebrew/bin/borders active_color=0xff2e81e6 inactive_color=0xff754343 width=8.0',
   'exec-and-forget /opt/homebrew/bin/sketchybar',
 ]
 
@@ -59,12 +59,12 @@ automatically-unhide-macos-hidden-apps = false
 #                 See:
 #                 https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-    inner.horizontal = 8
-    inner.vertical =   8
-    outer.left =       8
-    outer.bottom =     8
+    inner.horizontal = 12
+    inner.vertical =   12
+    outer.left =       12
+    outer.bottom =     12
     outer.top =        40
-    outer.right =      8
+    outer.right =      12
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -103,12 +103,14 @@ automatically-unhide-macos-hidden-apps = false
     ctrl-alt-cmd-shift-p = 'exec-and-forget open /Applications/Spotify.app'
     ctrl-alt-cmd-shift-t = 'exec-and-forget open /Applications/WezTerm.app'
     ctrl-alt-cmd-shift-w = 'exec-and-forget open /Applications/Arc.app'
-    ctrl-alt-cmd-shift-c = 'exec-and-forget open /Applications/Zed.app'
+    ctrl-alt-cmd-shift-c = 'exec-and-forget open /Applications/Zed.app || open ~/Applications/Zed.app'
     ctrl-alt-cmd-shift-s = 'exec-and-forget open /Applications/Slack.app'
     ctrl-alt-cmd-shift-f = 'exec-and-forget open /System/Library/CoreServices/Finder.app'
     ctrl-alt-cmd-shift-m = 'exec-and-forget open /Applications/Microsoft\ Teams.app'
     ctrl-alt-cmd-shift-o = 'exec-and-forget open /Applications/Microsoft\ Outlook.app'
-
+    ctrl-alt-cmd-shift-g = 'exec-and-forget open ~/Applications/Graphite.app'
+    ctrl-alt-cmd-shift-j = 'exec-and-forget open ~/Applications/Jira.app'
+    ctrl-alt-cmd-shift-h = 'exec-and-forget open ~/Applications/GitHub\ Desktop.app'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#layout
     alt-comma = 'layout accordion horizontal vertical'
@@ -124,7 +126,6 @@ automatically-unhide-macos-hidden-apps = false
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move
     # Left Finger cluster
-    alt-t = 'focus left'
     alt-shift-t = 'move left'
     alt-shift-d = 'move down'
     alt-shift-p = 'move up'

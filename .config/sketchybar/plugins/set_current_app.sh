@@ -7,14 +7,18 @@ existing_items=$(sketchybar --query bar | jq -r '.items[]' | grep '^app\.')
 for item in $existing_items; do
     if [ "$item" = "app.$current_app_pid" ]; then
         color=$active_color
-        bg=on
+        bg=0x66000000
     else
         color=$inactive_color
-        bg=off
+        bg=0x11000000
     fi
-    sketchybar --set "$item" \
-    label.color="$color" \
-    icon.color="$color" \
-    background.drawing="$bg"
+
+    sketchybar --animate sine 4 \
+        --set "$item" \
+        label.color="$color" \
+        icon.color="$color" \
+        background.color=$bg \
+        background.corner_radius=15 \
+        background.height=30
 
 done

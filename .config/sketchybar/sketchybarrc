@@ -14,7 +14,7 @@ PLUGIN_DIR="$CONFIG_DIR/plugins"
 # If you are looking for other colors, see the color picker:
 # https://felixkratz.github.io/SketchyBar/config/tricks#color-picker
 
-sketchybar --bar position=top height=40 blur_radius=30 color=0x00000000
+sketchybar --bar position=top height=40 blur_radius=0 color=0x00000000
 
 ##### Changing Defaults #####
 # We now change some default values, which are applied to all further items.
@@ -47,7 +47,7 @@ for sid in $(aerospace list-workspaces --all); do
         background.color=0x66000000 \
         background.corner_radius=15 \
         background.height=30 \
-        background.drawing=off \
+        blur_radius=10 \
         label="$sid" \
         label.align=center \
         label.padding_left=2 \
@@ -91,13 +91,15 @@ sketchybar --add item set_current_app right \
 
 sketchybar --add item clock center \
            --set clock update_freq=10 script="$PLUGIN_DIR/clock.sh" \
-           # --set clock update_freq=10 icon=  script="$PLUGIN_DIR/clock.sh" \
-           # --add item volume right \
-           # --set volume script="$PLUGIN_DIR/volume.sh" \
-           # --subscribe volume volume_change \
-           # --add item battery right \
-           # --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
-           # --subscribe battery system_woke power_source_change
+           background.color=0x44000000 \
+           background.height=30 \
+           background.corner_radius=15 \
+           label.align=center \
+           label.padding_left=2 \
+           label.padding_right=12 \
+           blur_radius=10
+
+
 
 ##### Force all scripts to run the first time (never do this in a script) #####
 sketchybar --update

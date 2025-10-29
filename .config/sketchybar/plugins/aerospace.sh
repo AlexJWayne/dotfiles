@@ -4,9 +4,7 @@
 # chmod +x ~/.config/sketchybar/plugins/aerospace.sh
 
 if [ "$1" = "$FOCUSED_WORKSPACE" ]; then
-    sketchybar --set $NAME background.drawing=on
-    sketchybar --set $NAME label.color=0xffffffff
+    sketchybar --animate sin 4 --set $NAME label.color=0xffffffff background.color=0x66000000
 else
-    sketchybar --set $NAME background.drawing=off
-    sketchybar --set $NAME label.color=0x66ffffff
+    sketchybar --animate sin 4 --set $NAME label.color=0x66ffffff background.color=0x00000000
 fi

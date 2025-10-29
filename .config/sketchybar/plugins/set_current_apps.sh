@@ -20,12 +20,11 @@ for app in $current_apps; do
 
     if [ "$app_pid" = "$current_app_pid" ]; then
         color=$active_color
-        bg=on
+        bg=0x66000000
     else
         color=$inactive_color
-        bg=off
+        bg=0x00000000
     fi
-
 
     if [ "$app_name" = "Arc" ]; then icon='󰖟';
     elif [ "$app_name" = "WezTerm" ]; then icon='';
@@ -33,8 +32,8 @@ for app in $current_apps; do
     elif [ "$app_name" = "LogicPro" ]; then icon='󰎇';
     elif [ "$app_name" = "Spotify" ]; then icon='';
     elif [ "$app_name" = "Slack" ]; then icon='';
-    elif [ "$app_name" = "MicrosoftOutlook" ]; then icon='󰴢';
-    elif [ "$app_name" = "MicrosoftTeams" ]; then icon='󰊻';
+    elif [ "$app_name" = "MicrosoftOutlook" ]; then icon='󰇮';
+    elif [ "$app_name" = "MicrosoftTeams" ]; then icon='󰬛';
     else icon='󰫈'
     fi
 
@@ -48,10 +47,10 @@ for app in $current_apps; do
                 label.align=center \
                 label.padding_left=0 \
                 label.padding_right=12 \
-                background.color=0x66000000 \
+                blur_radius=10 \
+                background.color=$bg \
                 background.corner_radius=15 \
                 background.height=30 \
-                background.drawing=$bg
-
+                click_script="osascript -e 'tell application \"System Events\" to set frontmost of first process whose unix id is $app_pid to true'"
 
 done

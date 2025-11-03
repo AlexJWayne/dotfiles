@@ -116,16 +116,15 @@ automatically-unhide-macos-hidden-apps = false
     alt-comma = 'layout accordion horizontal vertical'
     alt-period = 'layout tiles horizontal vertical'
     alt-slash = 'layout floating tiling'
+    alt-f = 'fullscreen'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-    # Left Finger cluster
     alt-t = 'focus left'
     alt-d = 'focus down'
     alt-p = 'focus up'
     alt-g = 'focus right'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move
-    # Left Finger cluster
     alt-shift-t = 'move left'
     alt-shift-d = 'move down'
     alt-shift-p = 'move up'
@@ -136,8 +135,8 @@ automatically-unhide-macos-hidden-apps = false
     alt-equal = 'resize smart +50'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-    ctrl-left  = 'workspace --wrap-around prev'
-    ctrl-right = 'workspace --wrap-around next'
+    ctrl-left  = 'workspace prev'
+    ctrl-right = 'workspace next'
     alt-1 = 'workspace 1'
     alt-2 = 'workspace 2'
     alt-3 = 'workspace 3'
@@ -176,17 +175,12 @@ automatically-unhide-macos-hidden-apps = false
 [mode.service.binding]
     esc = ['reload-config', 'mode main']
     r = ['flatten-workspace-tree', 'mode main'] # reset layout
-    f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
     backspace = ['close-all-windows-but-current', 'mode main']
 
     # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
     #s = ['layout sticky tiling', 'mode main']
 
-    alt-shift-h = ['join-with left', 'mode main']
-    alt-shift-j = ['join-with down', 'mode main']
-    alt-shift-k = ['join-with up', 'mode main']
-    alt-shift-l = ['join-with right', 'mode main']
-
-    down = 'volume down'
-    up = 'volume up'
-    shift-down = ['volume set 0', 'mode main']
+    alt-shift-t = ['join-with left', 'mode main']
+    alt-shift-d = ['join-with down', 'mode main']
+    alt-shift-p = ['join-with up', 'mode main']
+    alt-shift-g = ['join-with right', 'mode main']

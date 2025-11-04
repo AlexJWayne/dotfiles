@@ -100,6 +100,7 @@ automatically-unhide-macos-hidden-apps = false
     # '''
 
     # App shortcuts
+    #
     ctrl-alt-cmd-shift-p = 'exec-and-forget open /Applications/Spotify.app'
     ctrl-alt-cmd-shift-t = 'exec-and-forget open /Applications/WezTerm.app'
     ctrl-alt-cmd-shift-w = 'exec-and-forget open /Applications/Arc.app'
@@ -116,27 +117,38 @@ automatically-unhide-macos-hidden-apps = false
     alt-comma = 'layout accordion horizontal vertical'
     alt-period = 'layout tiles horizontal vertical'
     alt-slash = 'layout floating tiling'
-    alt-f = 'fullscreen'
+    alt-shift-f = 'fullscreen'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-    alt-t = 'focus left'
+    alt-f12 = 'focus left'
     alt-d = 'focus down'
     alt-p = 'focus up'
     alt-g = 'focus right'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move
-    alt-shift-t = 'move left'
+    alt-shift-f12 = 'move left'
     alt-shift-d = 'move down'
     alt-shift-p = 'move up'
     alt-shift-g = 'move right'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#resize
     alt-minus = 'resize smart -50'
-    alt-equal = 'resize smart +50'
+    alt-shift-equal = 'resize smart +50'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-    ctrl-left  = 'workspace prev'
-    ctrl-right = 'workspace next'
+    # ctrl-left  = 'workspace prev'
+    # ctrl-right = 'workspace next'
+
+    alt-a = 'workspace A'
+    alt-r = 'workspace R'
+    alt-s = 'workspace S'
+    alt-t = 'workspace T'
+
+    alt-n = 'workspace N'
+    alt-e = 'workspace E'
+    alt-i = 'workspace I'
+    alt-o = 'workspace O'
+
     alt-1 = 'workspace 1'
     alt-2 = 'workspace 2'
     alt-3 = 'workspace 3'
@@ -148,6 +160,16 @@ automatically-unhide-macos-hidden-apps = false
     alt-9 = 'workspace 9'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
+    alt-shift-a = ['move-node-to-workspace A', 'exec-and-forget sketchybar --trigger moved_app_workspace']
+    alt-shift-r = ['move-node-to-workspace R', 'exec-and-forget sketchybar --trigger moved_app_workspace']
+    alt-shift-s = ['move-node-to-workspace S', 'exec-and-forget sketchybar --trigger moved_app_workspace']
+    alt-shift-t = ['move-node-to-workspace T', 'exec-and-forget sketchybar --trigger moved_app_workspace']
+
+    alt-shift-n = ['move-node-to-workspace N', 'exec-and-forget sketchybar --trigger moved_app_workspace']
+    alt-shift-e = ['move-node-to-workspace E', 'exec-and-forget sketchybar --trigger moved_app_workspace']
+    alt-shift-i = ['move-node-to-workspace I', 'exec-and-forget sketchybar --trigger moved_app_workspace']
+    alt-shift-o = ['move-node-to-workspace O', 'exec-and-forget sketchybar --trigger moved_app_workspace']
+
     alt-shift-1 = ['move-node-to-workspace 1', 'exec-and-forget sketchybar --trigger moved_app_workspace']
     alt-shift-2 = ['move-node-to-workspace 2', 'exec-and-forget sketchybar --trigger moved_app_workspace']
     alt-shift-3 = ['move-node-to-workspace 3', 'exec-and-forget sketchybar --trigger moved_app_workspace']
@@ -180,7 +202,7 @@ automatically-unhide-macos-hidden-apps = false
     # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
     #s = ['layout sticky tiling', 'mode main']
 
-    alt-shift-t = ['join-with left', 'mode main']
+    alt-shift-f12 = ['join-with left', 'mode main']
     alt-shift-d = ['join-with down', 'mode main']
     alt-shift-p = ['join-with up', 'mode main']
     alt-shift-g = ['join-with right', 'mode main']

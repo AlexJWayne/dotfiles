@@ -32,11 +32,14 @@ local add_apps_bracket = function(space_name)
 end
 
 local add_space_padding = function(space_name)
+    local big_space = space_name == "T" or space_name == "O"
+
+
     local space_padding_name = "space." .. space_name .. ".padding"
     local space_padding = sbar.add(
         "item",
         space_padding_name,
-        { width = 4 }
+        { width = big_space and 32 or 4 }
     )
     data[space_name].items.padding = space_padding
 end
@@ -57,6 +60,7 @@ local update = function(space_name)
     local has_apps = space_items.has_apps(space_name)
     -- if not has_apps then return end
 
+
     local space_color = 0x00000000
     if has_apps then
         if data[space_name].focused then
@@ -75,6 +79,8 @@ local update = function(space_name)
     if has_apps then
         if data[space_name].focused then
             border_color = 0xff2e81e6
+        else
+            border_color = 0x44888888
         end
     end
 
@@ -90,7 +96,7 @@ local update = function(space_name)
             data[space_name].items.apps_bracket:set({
                 background = {
                     color = apps_color,
-                    border_color = border_color,
+                    border_color = data[space_name].focused and border_color or 0x00000000,
                 }
             })
         end

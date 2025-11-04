@@ -25,7 +25,7 @@ end
 
 local update = function(space_name)
     for _, app_item in pairs(data[space_name].items.apps) do
-        local color = app_item.app_name == current_app_name and 0xddffffff or 0x44ffffff
+        local color = app_item.app_name == current_app_name and 0xffffffff or 0x44ffffff
         if not data[space_name].focused then color = 0x44ffffff end
         -- sbar.animate("tanh", 10, function()
         app_item:set({ icon = { color = color } })

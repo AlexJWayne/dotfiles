@@ -149,15 +149,9 @@ automatically-unhide-macos-hidden-apps = false
     alt-i = 'workspace I'
     alt-o = 'workspace O'
 
-    alt-1 = 'workspace 1'
-    alt-2 = 'workspace 2'
-    alt-3 = 'workspace 3'
-    alt-4 = 'workspace 4'
-    alt-5 = 'workspace 5'
-    alt-6 = 'workspace 6'
-    alt-7 = 'workspace 7'
-    alt-8 = 'workspace 8'
-    alt-9 = 'workspace 9'
+    alt-z = 'workspace Z'
+    alt-x = 'workspace X'
+    alt-c = 'workspace C'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
     alt-shift-a = ['move-node-to-workspace A', 'exec-and-forget sketchybar --trigger moved_app_workspace']
@@ -170,15 +164,9 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-i = ['move-node-to-workspace I', 'exec-and-forget sketchybar --trigger moved_app_workspace']
     alt-shift-o = ['move-node-to-workspace O', 'exec-and-forget sketchybar --trigger moved_app_workspace']
 
-    alt-shift-1 = ['move-node-to-workspace 1', 'exec-and-forget sketchybar --trigger moved_app_workspace']
-    alt-shift-2 = ['move-node-to-workspace 2', 'exec-and-forget sketchybar --trigger moved_app_workspace']
-    alt-shift-3 = ['move-node-to-workspace 3', 'exec-and-forget sketchybar --trigger moved_app_workspace']
-    alt-shift-4 = ['move-node-to-workspace 4', 'exec-and-forget sketchybar --trigger moved_app_workspace']
-    alt-shift-5 = ['move-node-to-workspace 5', 'exec-and-forget sketchybar --trigger moved_app_workspace']
-    alt-shift-6 = ['move-node-to-workspace 6', 'exec-and-forget sketchybar --trigger moved_app_workspace']
-    alt-shift-7 = ['move-node-to-workspace 7', 'exec-and-forget sketchybar --trigger moved_app_workspace']
-    alt-shift-8 = ['move-node-to-workspace 8', 'exec-and-forget sketchybar --trigger moved_app_workspace']
-    alt-shift-9 = ['move-node-to-workspace 9', 'exec-and-forget sketchybar --trigger moved_app_workspace']
+    alt-shift-z = ['move-node-to-workspace Z', 'exec-and-forget sketchybar --trigger moved_app_workspace']
+    alt-shift-x = ['move-node-to-workspace X', 'exec-and-forget sketchybar --trigger moved_app_workspace']
+    alt-shift-c = ['move-node-to-workspace C', 'exec-and-forget sketchybar --trigger moved_app_workspace']
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
     # alt-tab = 'workspace-back-and-forth'

@@ -1,6 +1,7 @@
 local spaces_order = {
-    'A', 'R', 'S', 'T', 'N', 'E', 'I', 'O',
-    '1', '2', '3', '4', '5', '6', '7', '8', '9'
+    'A', 'R', 'S', 'T',
+    'N', 'E', 'I', 'O',
+    'Z', 'X', 'C',
 }
 
 
@@ -10,7 +11,7 @@ local function indexOf(array, value)
     for i, v in ipairs(array) do
         if v == value then return i end
     end
-    return nil
+    return -1
 end
 
 ---@return string[]

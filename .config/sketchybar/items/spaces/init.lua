@@ -1,57 +1,6 @@
 local colors = require("colors")
 local settings = require("settings")
-
--- local item_order = ""
-
-local app_icons = {
-    _default_ = "󰫈",
-    ["1Password"] = "",
-    ["Arc"] = "",
-    ["Finder"] = "󰀶",
-    ["GitHub Desktop"] = "",
-    ["Graphite"] = "",
-    ["Jira"] = "",
-    ["Logic Pro"] = "󰎇",
-    ["Microsoft Outlook"] = '󰇮',
-    ["Microsoft Teams"] = '󰊻',
-    ["Preview"] = "",
-    ["PrusaSlicer"] = "󰹛",
-    ["Safari"] = "󰀹",
-    ["Spotify"] = "",
-    ["System Settings"] = "",
-    ["WezTerm"] = "",
-    ["Zed"] = "󰅩",
-}
-
-local alpha_icons = {
-    a = utf8.char(0xF0B08),
-    b = utf8.char(0xF0B09),
-    c = utf8.char(0xF0B0A),
-    d = utf8.char(0xF0B0B),
-    e = utf8.char(0xF0B0C),
-    f = utf8.char(0xF0B0D),
-    g = utf8.char(0xF0B0E),
-    h = utf8.char(0xF0B0F),
-    i = utf8.char(0xF0B10),
-    j = utf8.char(0xF0B11),
-    k = utf8.char(0xF0B12),
-    l = utf8.char(0xF0B13),
-    m = utf8.char(0xF0B14),
-    n = utf8.char(0xF0B15),
-    o = utf8.char(0xF0B16),
-    p = utf8.char(0xF0B17),
-    q = utf8.char(0xF0B18),
-    r = utf8.char(0xF0B19),
-    s = utf8.char(0xF0B1A),
-    t = utf8.char(0xF0B1B),
-    u = utf8.char(0xF0B1C),
-    v = utf8.char(0xF0B1D),
-    w = utf8.char(0xF0B1E),
-    x = utf8.char(0xF0B1F),
-    y = utf8.char(0xF0B20),
-    z = utf8.char(0xF0B21),
-}
-
+local app_icons = require("items.spaces.app_icons")
 
 
 ---@type {
@@ -138,11 +87,11 @@ end
 local update_space_item = function(space_name)
     local space_item = data[space_name].items.space
     local has_apps = get_has_apps(space_name)
-    space_item:set({ label = space_name .. (has_apps and "" or "") })
+    space_item:set({ label = space_name })
     sbar.animate("tanh", 10, function()
         space_item:set({
             label = {
-                color = data[space_name].focused and 0xffffffff or 0x44ffffff,
+                color = data[space_name].focused and 0xffffffff or 0xaaffffff,
             }
         })
     end)
@@ -156,17 +105,15 @@ local add_app_item = function(space_name, app)
             padding_left = 0,
             padding_right = 0,
             font = {
-                size = 20
+                size = 22
             }
         }
     })
     data[space_name].items.apps[app.bundle_id] = app_item
     data[space_name].items.apps[app.bundle_id].app_name = app.name
 
-    local alpha_icon = alpha_icons[app.name:sub(1, 1):lower()]
     -- print(app.name)
-    local icon = app_icons[app.name] or alpha_icon or app_icons._default_
-    app_item:set({ icon = icon })
+    app_item:set({ icon = app_icons.get(app.name) })
 end
 
 local update_app_items = function(space_name)
@@ -190,7 +137,11 @@ local add_space_bracket = function(space_name)
         space_bracket_name,
         spaces_in_bracket,
         {
-            background = { color = has_apps and 0x44000000 or 0x00000000 },
+            blur_radius = 10,
+            background = {
+                color = has_apps and 0x88000000 or 0x00000000,
+                border_width = 2,
+            }
         })
     data[space_name].items.bracket = space_bracket
 
@@ -218,7 +169,6 @@ local update_space_bracket = function(space_name)
             background = {
                 color = color,
                 border_color = has_apps and data[space_name].focused and 0xff2e81e6 or 0x00000000,
-                border_width = 2
 
             }
         })

@@ -14,6 +14,7 @@ local apps = {
     ["Numbers"] = "",
     ["Preview"] = "",
     ["PrusaSlicer"] = "󰹛",
+    ["Reminders"] = "",
     ["Safari"] = "󰀹",
     ["Spotify"] = "",
     ["Slack"] = "",

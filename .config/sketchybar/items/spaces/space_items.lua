@@ -45,7 +45,7 @@ end
 ---@param space_name string
 local add = function(space_name)
     -- if has_no_apps(space_name) then return end
-    data[space_name].items.space = sbar.add("item", "space." .. space_name, 'left', {
+    data[space_name].items.space = sbar.add("item", "space." .. space_name, {
         label = {
             padding_left = -2
         }

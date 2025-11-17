@@ -3,6 +3,7 @@ local default = "󰫈"
 local apps = {
     ["1Password"] = "",
     ["Arc"] = "",
+    ["Electron"] = "󱀤",
     ["Finder"] = "󰀶",
     ["GitHub Desktop"] = "",
     ["Graphite"] = "",

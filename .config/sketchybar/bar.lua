@@ -9,4 +9,5 @@ sbar.bar({
     padding_left = 8,
     blur_radius = 0,
     topmost = "window",
+    -- y_offset = 32, -- Put under notch
 })

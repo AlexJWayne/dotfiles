@@ -17,7 +17,8 @@ local clock = sbar.add("item", 'clock', {
         color = 0x44000000,
     },
 
-    position = "center",
+    -- position = "right", -- Laptop screen
+    position = "center", -- Desktop screen
     update_freq = 10,
 })
 

@@ -26,8 +26,8 @@
       "U": "vim::Redo",
       "g p": "project_panel::ToggleFocus",
       "shift-y": ["workspace::SendKeystrokes", "y $"],
-      "s": ["vim::PushOperator", { "Sneak": {} }],
-      "S": ["vim::PushOperator", { "SneakBackward": {} }]
+      "s": ["vim::PushSneak", {}],
+      "S": ["vim::PushSneakBackward", {}]
     }
   },
   {

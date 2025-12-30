@@ -32,11 +32,12 @@ current_app_name = ""
 do_animate = false
 
 animate = function(fn)
-    if do_animate then
-        sbar.animate("tanh", 10, function()
-            fn()
-        end)
-    else
-        fn()
-    end
+    fn()
+    -- if do_animate then
+    --     sbar.animate("tanh", 10, function()
+    --         fn()
+    --     end)
+    -- else
+    --     fn()
+    -- end
 end

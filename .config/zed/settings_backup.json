@@ -14,17 +14,16 @@
     "default_model": {
       "provider": "copilot_chat",
       "model": "gpt-4o"
-    },
-    "version": "2"
+    }
   },
-  "show_edit_predictions": false,
+  "show_edit_predictions": true,
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "ui_font_size": 15,
   "buffer_font_size": 15.0,
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Gruvbox Dark Hard"
+    "dark": "Catbox"
   },
   "vim_mode": true,
   "vim": {
@@ -40,12 +39,14 @@
   "languages": {
     "TypeScript": {
       // "language_servers": ["typescript-language-server", "!vtsls", "..."],
+      "language_servers": ["tsgo"],
       "code_actions_on_format": {
         "source.fixAll.eslint": true
       }
     },
     "TSX": {
       // "language_servers": ["typescript-language-server", "!vtsls", "..."],
+      "language_servers": ["tsgo"],
       "code_actions_on_format": {
         "source.fixAll.eslint": true
       }
@@ -63,6 +64,11 @@
     "zls": {
       "initialization_toptions": {
         "enable_build_on_save": true
+      }
+    },
+    "biome": {
+      "settings": {
+        "require_config_file": true
       }
     }
   }

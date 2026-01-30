@@ -1,7 +1,7 @@
 local spaces_order = {
+    'Z', 'X', 'C',
     'A', 'R', 'S', 'T',
     'N', 'E', 'I', 'O',
-    'Z', 'X', 'C',
 }
 
 

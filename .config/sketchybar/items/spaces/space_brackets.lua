@@ -32,7 +32,7 @@ local add_apps_bracket = function(space_name)
 end
 
 local add_space_padding = function(space_name)
-    local big_space = space_name == "T" or space_name == "O"
+    local big_space = space_name == "C" or space_name == "T" or space_name == "O"
 
 
     local space_padding_name = "space." .. space_name .. ".padding"

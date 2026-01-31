@@ -29,7 +29,9 @@ export PATH="$PATH:/Users/alex/.local/bin"
 export PATH="$PATH:$HOME/zig"
 
 # https://github.com/zsh-users/zsh-autosuggestion
-source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 
 # Up arrow searches history with a prefix of what you typed so far
 autoload -U up-line-or-beginning-search

@@ -67,3 +67,4 @@ preexec() {
 precmd() {
     print -Pn "\e]2;%~\a"
 }
+export PATH="$HOME/.local/bin:$PATH"
